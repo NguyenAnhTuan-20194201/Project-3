@@ -17,7 +17,7 @@ const MartChart = () => {
   const [match, setMatch] = useState('');
   useEffect(() =>{
     const fetchData = async () => {
-      const data = await axios.get('http://localhost:5005/api/matchschema')
+      const data = await axios.get('https://project20221-team2-wordcup.onrender.com/api/matchschema')
       data.data.splice( 14, 1 );
       setMatch( data.data)
       console.log("Bracket",Bracket)

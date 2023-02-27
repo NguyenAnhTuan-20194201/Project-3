@@ -13,7 +13,7 @@ const Group = () =>{
     const [groups, setGroup] = useState([]);
     useEffect(() =>{
         const fetchGroups = async() =>{
-            const res = await axios('http://localhost:5005/api/matchgroup');
+            const res = await axios('https://project20221-team2-wordcup.onrender.com/api/matchgroup');
             console.log(res.data)
             setGroup(res.data)
             console.log("groups",groups)

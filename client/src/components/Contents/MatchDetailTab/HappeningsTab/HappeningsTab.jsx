@@ -9,7 +9,7 @@ const HappeningsTab = (props) => {
     const [data, setData] = useState([])
     useEffect(() => {
         async function fetchData() {
-            const result = await axios.get('/api/EventMatch/' + IdMatch)
+            const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/EventMatch/' + IdMatch)
             console.log([result.data])
             setData([result.data]);
         }

@@ -6,7 +6,7 @@ const ContentNews = () => {
     const [data, setData] = useState([])
     useEffect(() => {
         async function fetchData() {
-          const result = await axios.get('/api/news');
+          const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/news');
           console.log(result.data)
           setData(result.data);
         }

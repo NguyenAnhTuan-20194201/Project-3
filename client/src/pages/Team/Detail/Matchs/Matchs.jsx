@@ -9,11 +9,11 @@ const Matchs = () => {
     const [matchs, setMatchs] = useState([]);
     useEffect(()=>{ 
         const fetchMatchs = async() =>{
-            const team = await axios('http://localhost:5005/api/team/'+ idTeam.id);
+            const team = await axios('https://project20221-team2-wordcup.onrender.com/api/team/'+ idTeam.id);
             console.log('listMatch',(team.data.IdMatchs[0]))
             let matchDetail = []
             for(let i=0; i<team.data.IdMatchs.length; i++){
-                const detail = await axios('http://localhost:5005/api/overviewmatch/'+ team.data.IdMatchs[i])
+                const detail = await axios('https://project20221-team2-wordcup.onrender.com/api/overviewmatch/'+ team.data.IdMatchs[i])
                 console.log(detail)
                 matchDetail.push(detail.data)
             }

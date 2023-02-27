@@ -7,7 +7,7 @@ const StatTab = (props) => {
     const [data, setData] = useState([])
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get('/api/summarymatch/' + IdMatch)
+            const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/summarymatch/' + IdMatch)
             console.log(result.data)
             setData([result.data])
         }

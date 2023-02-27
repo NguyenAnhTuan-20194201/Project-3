@@ -12,8 +12,8 @@ const Squad = () => {
     const [coach, setCoach] = useState('');
     useEffect(() => {
         const fetchSquad = async() => {
-            const res1 = await axios('http://localhost:5005/api/player/' + idTeam.id)
-            const res2 = await axios('http://localhost:5005/api/coach/' + idTeam.id)
+            const res1 = await axios('https://project20221-team2-wordcup.onrender.com/api/player/' + idTeam.id)
+            const res2 = await axios('https://project20221-team2-wordcup.onrender.com/api/coach/' + idTeam.id)
             console.log(res1.data)
             console.log(res2.data)
             setSquad(res1.data)
@@ -24,7 +24,7 @@ const Squad = () => {
     const [team, setTeam] = useState('');
     useEffect(() =>{
         const fetchTeam = async() =>{
-            const team = await axios('http://localhost:5005/api/team/'+ idTeam.id);
+            const team = await axios('https://project20221-team2-wordcup.onrender.com/api/team/'+ idTeam.id);
             setTeam(team.data)
         }
         fetchTeam();

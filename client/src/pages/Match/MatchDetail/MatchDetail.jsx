@@ -16,7 +16,7 @@ const MatchDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0) //cuộn lên đầu trang
         const fetchData = async () => {
-            const result = await axios.get('/api/overviewmatch/' + IdMatch)
+            const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/overviewmatch/' + IdMatch)
             console.log(result.data)
             setData([result.data])
         }

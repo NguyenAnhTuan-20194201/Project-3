@@ -10,7 +10,7 @@ const Player = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get('/api/player')
+            const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/player')
             console.log(result.data)
             setData(result.data)
         }

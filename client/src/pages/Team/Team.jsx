@@ -23,7 +23,7 @@ const Team = () =>{
     const [team, setTeam] = useState('');
     useEffect(() =>{
         const fetchTeam = async() =>{
-            const team = await axios('http://localhost:5005/api/team/'+ idTeam.id);
+            const team = await axios('https://project20221-team2-wordcup.onrender.com/api/team/'+ idTeam.id);
             setTeam(team.data)
         }
         fetchTeam();

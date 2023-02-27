@@ -9,7 +9,7 @@ const ContentMatch = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get('/api/tutorialmatch')
+            const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/tutorialmatch')
             console.log(result.data)
             setData(result.data)
         }
