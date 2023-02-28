@@ -51,9 +51,10 @@ const ContentMatch = () => {
                                     <div className='loop21Item2'>
                                         <a href={child.video}>
                                             <img className='loop21Item2Img' src={child.imagehightlight} alt="ảnh highlight" />
+                                            <div className='loop21Item2Icon'></div>
+                                            <div className='loop21Item2Icon1'>{<FaCaretRight />}{child.timehighlight}</div>
                                         </a>
-                                        <div className='loop21Item2Icon'></div>
-                                        <div className='loop21Item2Icon1'>{<FaCaretRight />}{child.timehighlight}</div>
+                                        
                                     </div>
                                 </div>
                             ))}
