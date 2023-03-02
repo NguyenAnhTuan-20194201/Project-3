@@ -6,7 +6,7 @@ const ContentNews = () => {
     const [data, setData] = useState([])
     useEffect(() => {
         async function fetchData() {
-          const result = await axios.get('https://project20221-team2-wordcup.onrender.com/api/news');
+          const result = await axios.get('/api/news');
           console.log(result.data)
           setData(result.data);
         }
@@ -16,13 +16,19 @@ const ContentNews = () => {
         <div className='cNews'>
             {data.map(element => (
                 element.items.map((item) => (
-                    <a className='cNewsLink' key={element._id} href={item.PageUrl}>
+                    <div className='cNewsDisplay'>
                         <div>
-                            <div className='cNewsTitle'>{item.title}</div>
-                            <div className='cNewsTime'>Bongdaplus - {item.dateDis} ngày trước</div>
+                            <a className='cNewsLink' key={element._id} href={item.PageUrl}>
+                                <div className='cNewsTitle'>{item.title}</div>
+                            </a>
+                            <a href="https://www.google.com/search?q=bongdaplus&rlz=1C1CHBD_viVN980VN980&oq=bongda&aqs=chrome.5.69i60j69i57j0i131i433i512l4j0i131i433j69i60.7809j0j7&sourceid=chrome&ie=UTF-8">
+                                <div className='cNewsTime'>Bongdaplus - {item.dateDis} ngày trước</div>
+                            </a>
                         </div>
-                        <img className='cNewsImg' src={item.imageUrl} alt="anh" />
-                    </a>
+                        <a className='cNewsLink' key={element._id} href={item.PageUrl}>
+                            <img className='cNewsImg' src={item.imageUrl} alt="anh" />
+                        </a>
+                    </div>
                 ))
             ))}
         </div>
